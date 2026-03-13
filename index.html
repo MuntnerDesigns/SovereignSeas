@@ -1,25 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Coming Soon</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
+
 body{
 margin:0;
-display:flex;
-align-items:center;
-justify-content:center;
-height:100vh;
-background:#000;
+font-family:Arial;
+background:#ffffff;
 }
-img{
-max-width:100%;
-height:auto;
+
+/* Coming soon banner */
+
+.banner{
+width:100%;
+max-height:500px;
+object-fit:cover;
+display:block;
 }
+
+/* grid */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+padding:40px;
+max-width:1200px;
+margin:auto;
+}
+
+/* grid items */
+
+.grid a{
+display:block;
+}
+
+.grid img{
+width:100%;
+border-radius:6px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:transform .2s;
+}
+
+.grid img:hover{
+transform:scale(1.05);
+}
+
+@media (max-width:900px){
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
 </style>
+
 </head>
+
 <body>
 
-<img src="coming-soon.png">
+<img class="banner" src="coming-soon.png">
+
+<div class="grid">
+
+<a href="pdfs/doc1.pdf" target="_blank">
+<img src="images/thumb1.jpg">
+</a>
+
+<a href="pdfs/doc2.pdf" target="_blank">
+<img src="images/thumb2.jpg">
+</a>
+
+<a href="pdfs/doc3.pdf" target="_blank">
+<img src="images/thumb3.jpg">
+</a>
+
+<a href="pdfs/doc4.pdf" target="_blank">
+<img src="images/thumb4.jpg">
+</a>
+
+<a href="pdfs/doc5.pdf" target="_blank">
+<img src="images/thumb5.jpg">
+</a>
+
+<a href="pdfs/doc6.pdf" target="_blank">
+<img src="images/thumb6.jpg">
+</a>
+
+<a href="pdfs/doc7.pdf" target="_blank">
+<img src="images/thumb7.jpg">
+</a>
+
+<a href="pdfs/doc8.pdf" target="_blank">
+<img src="images/thumb8.jpg">
+</a>
+
+</div>
 
 </body>
 </html>
